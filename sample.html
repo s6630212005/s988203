@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base target="_top">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Quick Start - Leaflet</title>
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+		.leaflet-container {
+			height: 400px;
+			width: 600px;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	</style>
+
+	
+</head>
+<body>
+
+<div id="map" style="width: 600px; height: 400px;"></div>
+<script>
+	const map = L.map('map').setView([13.745856, 100.533477], 15); 
+    
+    const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(map);
+	const marker1 = L.marker([7.961046259664469, 98.81135541534356]).addTo(map)
+		.bindPopup('<b>Hi! Thale Waek</b><br /><img alt="Photo"   src="images/maps/Thale Waek.jpg" style="width: 150px;" title="A Thale Waek."><br />Photo by Phai.').openPopup();
+	const marker2 = L.marker([13.745856, 100.533477]).addTo(map)
+		.bindPopup('<b>Hi! Siam Center</b><br /><img alt="Photo"   src="images/maps/shopping.jpg" style="width: 150px;" title="A Siam Center."><br />Photo by Chanutkarn.').openPopup();
+	const marker3 = L.marker([7.77001150637296, 98.31347743671101]).addTo(map)
+		.bindPopup('<b>Hi! Yanui Beach</b><br /><img alt="Photo"   src="images/maps/YANUI BEACH.jpg" style="width: 150px;" title="A Yanui Beach."><br />Photo by Non.').openPopup();
+	const marker4 = L.marker([12.532023, 99.961521]).addTo(map)
+		.bindPopup('<b>Hi! Vananawa Water Park</b><br /><img alt="Photo"   src="images/maps/Vananawa Water Park.jpg" style="width: 150px;" title="A Vananawa Water Park."><br />Photo by Iq.').openPopup();
+	const marker5 = L.marker([7.959793, 98.286948]).addTo(map)
+		.bindPopup('<b>Hi! Kamala</b><br /><img alt="Photo"   src="images/maps/kamala.jpeg" style="width: 150px;" title="A Thale Waek."><br />Photo by Fah.').openPopup();
+	const marker6 = L.marker([7.77031, 98.30628]).addTo(map)
+		.bindPopup('<b>Hi! Windmill Viewpoint</b><br /><img alt="Photo"   src="images/maps/Windmill Viewpoint.JPG" style="width: 150px;" title="A Windmill Viewpoint."><br />Photo by Fis.').openPopup();
+	const marker7 = L.marker([7.761827066031125, 98.30535940527386]).addTo(map)
+		.bindPopup('<b>Hi! Promthep Cape</b><br /><img alt="Photo"   src="images/maps/Promthep Cape.jpg" style="width: 150px;" title="A Promthep Cape."><br />Photo by Dream.').openPopup();
+	const marker8 = L.marker([7.88344, 98.38740]).addTo(map)
+		.bindPopup('<b>Hi! Culture</b><br /><img alt="Photo"   src="images/maps/York.JPG" style="width: 150px;" title="A Culture."><br />Photo by york.').openPopup();
+	const marker9 = L.marker([9.1562721, 982705298]).addTo(map)
+		.bindPopup('<b>Hi! Champoo</b><br /><img alt="Photo"   src="images/maps/Champoo.JPGcccccc" style="width: 150px;" title="A champoo."><br />Photo by Champoo.').openPopup();
+	const marker10 = L.marker([7.5899600, 99.669118]).addTo(map)
+		.bindPopup('<b>Hi! Khao Chang Hai Cave</b><br /><img alt="Photo"   src="images/maps/Khao Chang Hai Cave.jpg" style="width: 150px;" title="A Khao Chang Hai Cave."><br />Photo by Nadear.').openPopup();
+
+
+
+</script>
+<!----- การใส่รูปภาพ
+<img alt="Photo"   src="images/maps/shopping.jpg" width="150px" title="A Siam Center.">
+
+<img alt="Photo"   src="images/maps/shopping.jpg" style="width: 150px;" title="A Siam Center."> 
+------>
+</body>
+</html>
